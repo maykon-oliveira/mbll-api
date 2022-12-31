@@ -1,0 +1,43 @@
+<div
+  [routerLink]="['hero', hero.id]"
+  class="border-2 border-gray-200 px-4 py-6 rounded-lg"
+>
+  <div class="inline-flex items-center justify-center">
+    <img
+      class="sm:w-32 sm:h-32 h-20 w-20 rounded-full bg-blue-100 text-blue-500 flex-shrink-0"
+      [src]="hero.avatar"
+      [alt]="hero.name"
+    />
+  </div>
+  <h2 class="font-medium title-font my-3 text-gray-900 text-lg">
+    {{ hero.name }}
+  </h2>
+  <table class="table-auto w-full text-left whitespace-no-wrap">
+    <thead>
+      <tr>
+        <th
+          class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl"
+        >
+          Use
+        </th>
+        <th
+          class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100"
+        >
+          Win
+        </th>
+        <th
+          class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100"
+        >
+          Ban
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="px-4 py-3">{{ hero.rank_data.use }}</td>
+        <td class="px-4 py-3">{{ hero.rank_data.win }}</td>
+        <td class="px-4 py-3">{{ hero.rank_data.ban }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
